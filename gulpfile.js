@@ -1,4 +1,4 @@
-const Q=1;
+const Q=10;
 
 var gulp = require("gulp");
 
@@ -36,7 +36,7 @@ var buildjs = function(file){
   console.log("build " + file.src);
   var browserify = require("browserify");
   var source = require("vinyl-source-stream");
-  browserify({
+  return browserify({
     entries: [file.src],
     transform: ["debowerify"]
   })
