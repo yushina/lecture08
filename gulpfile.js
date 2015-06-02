@@ -64,7 +64,7 @@ gulp.task("buildhtml", function(){
   var src = "src/html/test.html";
   var dist = "public";
   
-  range(1, 10).forEach(function(i){
+  range(1, Q).forEach(function(i){
     i = format(i);
     return gulp.src(src).
       pipe(ejs({number: i})).
