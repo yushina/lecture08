@@ -2986,7 +2986,7 @@ module.exports = isArray || function (val) {
       it("引数に指定された値を返す", function(){
         expect(fizz(5)).to.be(5);
         expect(fizz(7)).to.be(7);
-        expect(fizz(39)).to.be(39);
+        expect(fizz(41)).to.be(41);
       });
     });
     
