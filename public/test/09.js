@@ -2994,6 +2994,8 @@ module.exports = isArray || function (val) {
     
   });
 
+  boot();
+
 })();
 
 },{"./boot":5,"./components/expect.js/expect.js.js":6}]},{},[7]);
