@@ -2978,10 +2978,12 @@ module.exports = isArray || function (val) {
       expect(add(0, 0)).to.be(0);
       expect(add(1, -1)).to.be(0);
       expect(add(0, 1)).to.be(1);
-      expect(add(3.14, 2)).to.be(5.14);
+      expect(add(3.14, 2)).to.be(3.14 + 2);
     });
     
   });
+
+  boot();
 
 })();
 
