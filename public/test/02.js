@@ -2984,9 +2984,9 @@ module.exports = isArray || function (val) {
 
     context("引数に奇数が指定された場合", function(){
       it("falseを返す", function(){
-        expect(isEvenNumber(1)).to.be(true);
-        expect(isEvenNumber(123457)).to.be(true);
-        expect(isEvenNumber(9083719)).to.be(true);
+        expect(isEvenNumber(1)).to.be(false);
+        expect(isEvenNumber(123457)).to.be(false);
+        expect(isEvenNumber(9083719)).to.be(false);
       });
     });
     
