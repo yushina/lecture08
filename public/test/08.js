@@ -2984,24 +2984,24 @@ module.exports = isArray || function (val) {
 
     context("引数が5の倍数の場合", function(){
       it('文字列"buzz"を返す', function(){
-        expect(buzz(5)).to.be("buzz");
-        expect(buzz(10)).to.be("buzz");
-        expect(buzz(75)).to.be("buzz");
+        expect(fizzbuzz(5)).to.be("buzz");
+        expect(fizzbuzz(10)).to.be("buzz");
+        expect(fizzbuzz(125)).to.be("buzz");
       });
     });
 
     context("引数が3の倍数で、しかも5の倍数の場合", function(){
       it('文字列"fizzbuzz"を返す', function(){
-        expect(buzz(15)).to.be("fizzbuzz");
-        expect(buzz(45)).to.be("fizzbuzz");
-        expect(buzz(60)).to.be("fizzbuzz");
+        expect(fizzbuzz(15)).to.be("fizzbuzz");
+        expect(fizzbuzz(45)).to.be("fizzbuzz");
+        expect(fizzbuzz(60)).to.be("fizzbuzz");
       });
     });    
 
     context("それ以外の場合", function(){
       it("引数に指定された値を返す", function(){
-        expect(fizzbuzz(7)).to.be(5);
-        expect(fizzbuzz(39)).to.be(5);
+        expect(fizzbuzz(7)).to.be(7);
+        expect(fizzbuzz(41)).to.be(41);
       });
     });
     
