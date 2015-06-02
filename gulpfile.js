@@ -57,11 +57,27 @@ gulp.task("copyjs", function(){
   return gulp.src(files).pipe(gulp.dest("public/js"));
 });
 
+gulp.task("buildhtml", function(){
+  var ejs = require("gulp-ejs");
+  var rename = require("gulp-rename");
+
+  var src = "src/html/test.html";
+  var dist = "public";
+  
+  range(1, 10).forEach(function(i){
+    i = format(i);
+    return gulp.src(src).
+      pipe(ejs({number: i})).
+      pipe(rename(i + ".html")).
+      pipe(gulp.dest(dist));
+  });
+});
+
 gulp.task("buildjs", function(){
   range(1, Q).map(toFile).forEach(buildjs);
 });
 
-gulp.task("build", ["copy", "buildjs"]);
+gulp.task("build", ["copy", "buildjs", "buildhtml"]);
 
 gulp.task("serve",  function(){
   var connect = require('gulp-connect');
