@@ -2984,7 +2984,7 @@ module.exports = isArray || function (val) {
 
     context("それ以外の場合", function(){
       it("引数に指定された値を返す", function(){
-        expect(buzz(3)).to.be(5);
+        expect(buzz(3)).to.be(3);
         expect(buzz(7)).to.be(7);
         expect(buzz(39)).to.be(39);
       });
