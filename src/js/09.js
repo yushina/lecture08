@@ -3,7 +3,7 @@
   var expect = require("expect.js");
   var boot = require("./boot");
 
-  describe("引数を1つとる関数 porjection を次のように定義せよ", function(){
+  describe("引数を1つとる関数 projection を次のように定義せよ", function(){
     var a = {
       name: "abcdefg"
     };
